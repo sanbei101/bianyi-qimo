@@ -78,3 +78,5 @@ S → BB
 B → aB | b
 ```
 构造LR(0)分析表
+
+#image("assets/image.png")
