@@ -56,14 +56,14 @@ B → bB | ε
 求每个非终结符的FIRST集和FOLLOW集。
 
 
-将以下文法消除左递归：
+将以下文法消除左递归:
 ```
 E → E + T | E - T | T
 T → T * F | T / F | F
 F → (E) | id
 ```
 
-已知文法G[S]：
+已知文法G[S]:
 ```
 S → aAB | bBA
 A → a | ε
@@ -79,6 +79,68 @@ B → aB | b
 ```
 构造LR(0)分析表
 
-#image("assets/image.png")
 
-#image("assets/image-1.png")
+10. 设文法 $G(S)$:
+  $
+    S & -> (T) | a S | a \
+    T & -> T, S | S
+  $
+1. 消除左递归和提公共左因子;
+
+2. 构造相应的 FIRST 和 FOLLOW 集合;
+
+构造下列正规式相应的 DFA。
+
+1. $1(0|1)^* 101$
+
+2. $1(1010^* | 1(010)^* 1)^* 0$
+
+3. $a((a|b)^* | a b^* a)^* b$
+
+4. $b((a b)^* | b b)^* a b$
+
+#image("assets/image-2.png", width: 100%)
+
+
+已知文法 $G[S]$:
+$
+  S & -> M H | a \
+  H & -> L S o | epsilon \
+  K & -> d M L | epsilon \
+  L & -> e H f \
+  M & -> K | b L M
+$
+
+判断 $G$ 是否是 LL(1) 文法,如果是,构造 LL(1) 分析表。
+
+
+
+
+已知文法 $G[S]$ 为:
+$
+  S & -> a | Lambda | (T) \
+  T & -> T, S | S
+$
+
+(1) 计算 $G[S]$ 的 FIRSTVT 和 LASTVT。
+
+(2) 构造 $G[S]$ 的算符优先关系表并说明 $G[S]$ 是否为算符优先文法。
+
+(3) 计算 $G[S]$ 的优先函数。
+
+(4) 给出输入串 $(a,a)$\# 和 $(a,(a,a))$\# 的算符优先分析过程。
+
+
+证明下面文法不是 LR(0) 而是 SLR(1)。
+$
+  S & -> A \
+  A & -> A b | b B a \
+  B & -> a A c | a | a A b
+$
+
+
+已知文法
+$
+  A & -> a A d | a A b | epsilon
+$
+判断该文法是否是 SLR(1) 文法，若是，请构造相应分析表，并对输入串 $a b$\# 给出分析过程。
