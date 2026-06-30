@@ -1,7 +1,13 @@
 #set page(margin: 1cm)
 
 #set text(font: "Maple Mono")
-
+#let answer = block(
+  fill: rgb("#f6f8fa"),
+  stroke: 0.5pt + rgb("#d0d7de"),
+  inset: 100pt,
+  radius: 6pt,
+  width: 100%,
+)
 #show raw.where(block: false): it => box(
   fill: rgb("#f6f8fa"),
   stroke: 0.5pt + rgb("#d0d7de"),
@@ -29,11 +35,14 @@
 5. 代码优化:对中间代码进行变换或改造,使生成的目标代码更高效。
 6. 目标代码生成:将中间代码转换成特定机器上的目标代码。
 ```
+#answer
 
 
 == 解答题
 
 已知文法G[S]: `S → aS | bS | ε`,求该文法生成的语言L(G)。
+
+#answer
 
 已知文法G[E]:
 ```
@@ -42,7 +51,7 @@ T → T * F | F
 F → (E) | id
 ```
 对句子`id + id * id`,写出最左推导过程并画出语法树。
-
+#answer
 
 正规式`(a|b)*abb`对应的NFA
 
@@ -54,7 +63,7 @@ A → aA | ε
 B → bB | ε
 ```
 求每个非终结符的FIRST集和FOLLOW集。
-
+#answer
 
 将以下文法消除左递归:
 ```
@@ -62,7 +71,7 @@ E → E + T | E - T | T
 T → T * F | T / F | F
 F → (E) | id
 ```
-
+#answer
 已知文法G[S]:
 ```
 S → aAB | bBA
@@ -78,7 +87,7 @@ S → BB
 B → aB | b
 ```
 构造LR(0)分析表
-
+#answer
 
 10. 设文法 $G(S)$:
   $
@@ -88,7 +97,7 @@ B → aB | b
 1. 消除左递归和提公共左因子;
 
 2. 构造相应的 FIRST 和 FOLLOW 集合;
-
+#answer
 构造下列正规式相应的 DFA。
 
 1. $1(0|1)^* 101$
@@ -98,9 +107,9 @@ B → aB | b
 3. $a((a|b)^* | a b^* a)^* b$
 
 4. $b((a b)^* | b b)^* a b$
-
+#answer
 #image("assets/image-2.png", width: 100%)
-
+#answer
 
 已知文法 $G[S]$:
 $
@@ -113,7 +122,7 @@ $
 
 判断 $G$ 是否是 LL(1) 文法,如果是,构造 LL(1) 分析表。
 
-
+#answer
 
 
 已知文法 $G[S]$ 为:
@@ -129,7 +138,7 @@ $
 (3) 计算 $G[S]$ 的优先函数。
 
 (4) 给出输入串 $(a,a)$\# 和 $(a,(a,a))$\# 的算符优先分析过程。
-
+#answer
 
 证明下面文法不是 LR(0) 而是 SLR(1)。
 $
@@ -138,9 +147,10 @@ $
   B & -> a A c | a | a A b
 $
 
-
+#answer
 已知文法
 $
   A & -> a A d | a A b | epsilon
 $
 判断该文法是否是 SLR(1) 文法，若是，请构造相应分析表，并对输入串 $a b$\# 给出分析过程。
+#answer
